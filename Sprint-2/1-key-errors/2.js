@@ -7,9 +7,9 @@
 // There will be an error because the name of the input variable is not defined and we are just putting a number which will throw 'unexpected number' error.
 // and likewise, the variable num is undefined.
 
-function square(3) {
-    return num * num;
-}
+//function square(3) {
+//    return num * num;
+//}
 
 // =============> write the error message here
 // Uncaught SyntaxError: Unexpected number
