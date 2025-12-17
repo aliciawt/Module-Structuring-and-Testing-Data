@@ -17,18 +17,33 @@ function formatTimeDisplay(seconds) {
 // Questions
 
 // a) When formatTimeDisplay is called how many times will pad be called?
-// =============> write your answer here
+// 3 times
 
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
 // b) What is the value assigned to num when pad is called for the first time?
-// =============> write your answer here
+// The value assigned to num when pad is called for the first time is the variable TotalHours
+// totalHours = (totalMinutes - remainingMinutes) / 60
+// totalMinutes = (seconds - remainingSeconds) / 60
+// remainingMinutes = totalMinutes % 60
+// remainingSeconds = seconds % 60 = 61 % 60 = 1
+// totalMinutes = (61 - 1) / 60 = 1
+// remainingMinutes = 1 % 60 = 1
+// totalHours = (1 - 1) / 60 = 0
+// So, the value assigned to num when pad is called for the first time is 0.
 
 // c) What is the return value of pad is called for the first time?
-// =============> write your answer here
+// The return value of pad when it is called for the first time is "00".
+// First, 0 is turned into string --> "0".
+// Then, a pad of 0 is added at the start so the string length will be 2.
+// Hence, the return value is "00".
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+// The value assigned to num when pad is called for the last time is the variable remainingSeconds.
+// As calculated above, remainingSeconds = 1.
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+// The return value of pad when it is called for the last time is "01".
+// First, 1 is turned into string --> "1".
+// Then, a pad of 0 is added at the start so the string length will be 2.
+// Hence, the return value is "01".
