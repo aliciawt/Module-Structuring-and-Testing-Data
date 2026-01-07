@@ -8,10 +8,9 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-    if (numerator < denominator) return true;
-    if (numerator > denominator) return false;
-    if (numerator || denominator < 0) return true;
-    if (numerator === denominator) return false;
+  if (denominator === 0) return "Denominator cannot be zero";
+  if (Math.abs(numerator) < Math.abs(denominator)) return true;
+  return false;
 }
 
 // here's our helper again
@@ -54,3 +53,10 @@ assertEquals(equalFraction, false);
 
 // Stretch:
 // What other scenarios could you test for?
+
+// Zero Denominator check:
+// Input: numerator = 3, denominator = 0
+// target output: "Denominator cannot be zero"
+// Explanation: Fractions with denominator 0 are invalid. The function should return a warning message.
+const zeroDenominator = isProperFraction(3, 0);
+assertEquals(zeroDenominator, "Denominator cannot be zero");
