@@ -10,7 +10,7 @@ test("should return false for an improper fraction", () => {
 });
 
 // Case 3: Identify Negative Fractions:
-test("should return true for a proper fraction", () => {
+test("should return true for a negative fraction", () => {
   expect(isProperFraction(-2, 3)).toEqual(true);
 });
 
